@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: white;
+        }
+        .bg-black{
+            color-interpolation-filters: linearRGB;
+            display: flex;
+            color:hsl(from bg-black h s l)
+            chocolate            
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1 id ="title" class="heading">Dom learning on chai aur code
+            <span style="display: none;">What is this?</span>
+        </h1>
+        <h2>this needs to be done</h2>
+        <h2>this needs to be done</h2>
+        <h2>this needs to be done</h2>
+        <h2>this needs to be done</h2>
+        <input type="password" name="" id="">
+        <p>This series is so good and amazing</p>
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+<!--
+
+document.getElementById('title')
+document.getElementById('title').id
+document.getElementById('title').className
+document.getElementById('title').getAttribute('key') => gives value 
+document.getElementById('title').setAttribute('key', 'test') => overides the previous value
+
+const title = document.getElementById('title')
+title.style.backgroundColor = 'Green'
+title.style.padding = '15px'
+title.style.borderRadius = '20px'
+title.textContent => displays all the text content if hidden by css property
+title.innerHTML => displays all the text content including html tags 
+title.innerText => displays content that is only visible on the page 
+
+document.querySelector('h2') => query selector always give the first element from the document even if there is more 
+document.querySelector('#title')
+document.querySelector('.heading')
+document.querySelector('input[type = "password"]')
+
+Always remember nodeList and Html collection is not an array although we can convert them in array 
+array always contains the methods like : forEach, map, Reduce 
+
+document.querySelectorAll => querSelectorAll selects all the value or the full node list and it is not an aray
+let's say 
+tempList = document.querySelectorAll('li')
+and if apply css property 
+tempList.style.color = 'green' // it won't work you have to define the index on which one to apply
+tempList[0].style.color = 'green'  // it will work  // we always have to define index even if there is only one element 
+
+nodelist and HTML collection are two different things
+Array.from() is used to convert nodelist or HTML collection to array
+
+you can use forEach in node list but not with html collection 
+
+-->
