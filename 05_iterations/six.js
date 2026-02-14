@@ -60,3 +60,26 @@ userBooks = books.filter( (bk) => {
     return bk.publish >= 2000 && bk.genre === 'Science'
 } )
 console.log(userBooks)
+
+
+const arr = [1, 2, 3, 4, 5]
+
+const ans = arr.filter( (n) => {
+    if (n % 2 == 0){
+        return true;
+    }else {
+        return false
+    }
+} )
+console.log(ans)
+
+const newarr = ["Harkirat", "Harman", "Aryan", "Varun", "Raunik", "Krish"]
+
+const name = newarr.filter( (n) => {
+    if(n.startsWith("H")){
+        return true
+    }else {
+        return false
+    }
+} )
+console.log(name)
