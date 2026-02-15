@@ -127,7 +127,7 @@ class Square extends Shape{
 
 
 
-const r1 = new Rectangle (200, 100, 30, "green")
+const r1 = new Rectangle (200, 100, 30, "green") // here Rectangle is a class and we are definig a new object r1 in that class
 const c2 = new Circle (34, 12, "red")
 const s1 = new Square (10, 7, "Blue")
 
