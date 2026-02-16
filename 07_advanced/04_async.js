@@ -36,6 +36,13 @@ function fileReadCallback(err, contents){
 
 fss.readFile("07_advanced/a.txt", "utf-8", fileReadCallback)
 
+// why you need callback because 
+// let's say it takes 10s to read the file and if i have written the asynchronus code after this 
+// like for loop then it will run the for loop the control then it need to reach above to execute 
+// content . That's why for asyncnhronous code you definitely need the callback but you may not 
+// need while writing promises 
+
+
 let sum = 0
 for(let i = 0; i <= 100; i++){
     sum += i
