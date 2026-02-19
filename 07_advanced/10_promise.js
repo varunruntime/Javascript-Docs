@@ -84,8 +84,68 @@ fsReadFilePromise("07_advanced/a.txt", "utf-8") //it's an asynchronous function
         })
     }
 
-    setTimeoutPromisified(1000) 
-        .then(function(){
-            console.log("Hello Swettie, how are you ?")
-        })
+    // setTimeoutPromisified(1000) 
+    //     .then(function(){
+    //         console.log("Hello Swettie, how are you ?")
+    //     })
+    //     .close(function(){ // it will not run in setTimeout just for practice purpose 
+    //         console.log("an error came")
+    //     })
+    //     .finally(function(){ // it will always run either after .then or .close no matter what 
+    //         console.log("finall after either then or catch")
+    //     })
       
+
+        const fss = require("fs")
+
+        function fssReadFilePromisified(FilePath, Encoding){
+            return new Promise (function(resolve, reject){
+                fss.readFile(FilePath,Encoding,function(err,data){
+                    if(err){
+                        reject(err)
+                    } else {
+                        resolve(data)
+                    }
+                })
+            })
+        }
+
+// there are two syntax to call the promises one is that we have used in the above examples and 2nd one is below 
+// let's assume that promise will never get reject 
+
+// async function main() {
+//     let file1Content = fssReadFilePromisified("07_advanced/a.txt", "utf-8")
+//     let file2Content = fssReadFilePromisified("07_advanced/b.txt", "utf-8")
+//     let file3Content = fssReadFilePromisified("07_advanced/c.txt", "utf-8")
+
+//     console.log(file1Content)
+//     console.log(file2Content)
+//     console.log(file3Content)
+
+// we will get Promise { <pending> } because here we are try to print fileContent without resolve
+// so we need to resolve for that we will use async await syntax if we are calling a promisified 
+// function or simply we can use .then 
+
+
+// }
+
+// main()
+
+async function main() {
+    let fileContent1 = await fssReadFilePromisified("07_advanced/a.txt", "utf-8")
+// so it means when this promisified fucntion will resolve it will return content in fileContent1
+    let fileContent2 = await fssReadFilePromisified("07_advanced/b.txt", "utf-8")
+    let fileContent3 = await fssReadFilePromisified("07_advanced/c.txt", "utf-8")
+
+    console.log(fileContent1)
+    console.log(fileContent2)
+    console.log(fileContent3)
+    
+}
+
+main()
+console.log("hi")
+console.log("hello")
+
+// it also a asynchronous way of doing it 
+// it reads like synchronous code but it is asynchronous code
