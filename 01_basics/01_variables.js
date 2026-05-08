@@ -4,6 +4,7 @@ var accountEmail = "varun@gmail.com"
 let accountCity = "jaipur"
 let accountYear;
 
+// const let var is used to declare variable 
 // accountID = 2 cannot be changed because it is const once defined can't be changed
 /*
 Prefer not to use var because of issue in block scope and funtional scope 

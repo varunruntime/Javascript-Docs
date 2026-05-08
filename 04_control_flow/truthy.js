@@ -20,6 +20,6 @@ if (userEmail){
 
 const emptyobj = {}
 
-if (Object.keys(emptyobj).length === 0) {
+if (Object.keys(emptyobj).length === 0) { // here now object.keys(emptyobj) becomes an array so  now we can perform the array properties to check whether the object is empty or not 
     console.log("Object is empty")
 }

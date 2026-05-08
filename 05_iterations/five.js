@@ -32,7 +32,7 @@ coding.forEach(printme) // here we just giving reference of the function don't n
                         // to execute them like { coding.forEach(printme()) }
 
 
-coding.forEach( (item, index, arr) => {
+coding.forEach( (item, index, arr) => { // we can pass 3 paramneters in the foreach (item, index, arr)
     console.log(item, index, arr);
 
 } )

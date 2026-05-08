@@ -7,9 +7,13 @@ const myObjects = {
 // forin loop 
 // we use myobejcts[key]
 
+// therefore for iterating objects we use forin loops
+// it is not only used in objects as well 
+
 for (const key in myObjects) {
     console.log(`${key} shortcut is for ${myObjects[key]}`)
 }
+//myObjects[key] provides the values of the keys in the objects 
 
 const programming = ["js","python", "java", "Cpp" ]
 
@@ -20,8 +24,17 @@ for (const key in programming) {
     console.log(programming[key]);
 }
 
+
+// for (const key in map) {.  // map is not iterable in forin loop 
+//     console.log(key)
+    
+// }
+
+
 // so when we talk about objects we use forin loop
-// for arrays we will mostly use foreach loop 
+// for arrays we will mostly use forof, foreach loop 
+
+
 
 // const map = new Map()
 // map.set('IN', "India")
@@ -29,9 +42,6 @@ for (const key in programming) {
 // map.set('Fr', "France")
 
 
-// for (const key in map) {.  // map is not iterable in forin loop 
-//     console.log(key)
-    
-// }
+
 
 

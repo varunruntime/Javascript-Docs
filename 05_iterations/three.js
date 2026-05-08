@@ -46,6 +46,8 @@ for (const [key, val] of short) {   // if we use key seperately it won't work li
     console.log(key, ':-', val) // we can do this as well 
 }
 
+// you can iterate with forof in maps only not in objects
+
 const myObject = {
     game1: "Mario",
     game2: "Supermario",

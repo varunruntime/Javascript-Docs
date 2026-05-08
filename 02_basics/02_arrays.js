@@ -7,8 +7,8 @@ const dc_heroes = ["flash", "superman", "batman"]
 // console.log(marvel_heroes)
 // console.log(marvel_heroes[3][1]) // we can access the elementof 4th element like this 
 
-// marvel_heroes.concat(dc_heroes) // it gives the smae result but it is wrong
-// because concat works on new arrays 
+// marvel_heroes.concat(dc_heroes) // it gives the same result but it is wrong
+// because concat works on new arrays. When we perform concat operation it gives result in new array 
 
 // const allHeroes = marvel_heroes.concat(dc_heroes) // now it works fine 
 // console.log(allHeroes)
