@@ -1,3 +1,5 @@
+<!-- How to create a new Element two.html and three.html --> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +9,7 @@
 </head>
 <body style="background-color: #212121; color: #ffff;">
     <div class="parent">
+        <!-- this is comment -->
         <div class="day">Monday</div>
         <div class="day">Tuesday</div>
         <div class="day">Wednesday</div>
@@ -17,15 +20,34 @@
     </div>
 </body>
 <script>
-    const parent = document.querySelector('.parent')
-    // console.log(parent);
-    // console.log(parent.children);
-    // console.log(parent.children[1].innerHTML);
+    const parents = document.querySelector('.parent')
+    // console.log(parents);
+    // console.log(parents.children); // gives the HtmlCollection 
+    // console.log(parents.children[1].innerHTML);
 
-    for (let i = 0; i < parent.children.length; i++) {
-        console.log(parent.children[i].innerHTML);
+    // for (let i = 0; i < parent.children.length; i++) { // you can use for loop on any array like structures 
+    //     console.log(parents.children[i].innerHTML);
         
-    }
+    // }
+
+    // parents.children[1].style.color = "orange"
+    // console.log(parents.firstElementChild.innerHTML);
+    // console.log(parents.lastElementChild.innerHTML);
+
+    const dayOne = document.querySelector(".day")
+    console.log(dayOne);
+
+    // from child you can also select the parent element 
+    console.log(dayOne.parentElement);
+
+    // from child you can go to next sibling child 
+    console.log(dayOne.nextElementSibling);
+
+    console.log("Nodes: ", parents.childNodes); // you might be expecting 7 nodes but it's not like that 
+    // it shows all the nodes in that html element(like how we studied that html have many childs), the line you entered is also counted in the nodes
+
+
+
      
 </script>
 </html>

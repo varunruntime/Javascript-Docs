@@ -1,3 +1,5 @@
+<!-- All DOM Selector -->
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,11 +42,13 @@
 
 <!--
 
-document.getElementById('title')
+document.querySelector('#title') “Find the HTML element whose id is "title".”
+document.getElementById('title') 
 document.getElementById('title').id
 document.getElementById('title').className
 document.getElementById('title').getAttribute('key') => gives value 
-document.getElementById('title').setAttribute('key', 'test') => overides the previous value
+document.getElementById('title').setAttribute('key', 'test') => overides the previous value 
+document.getElementById('title').setAttribute('class', 'test heading') “Find the element whose id is title and set its class attribute to test heading.”
 
 const title = document.getElementById('title')
 title.style.backgroundColor = 'Green'
@@ -55,23 +59,40 @@ title.innerHTML => displays all the text content including html tags
 title.innerText => displays content that is only visible on the page 
 
 document.querySelector('h2') => query selector always give the first element from the document even if there is more 
-document.querySelector('#title')
-document.querySelector('.heading')
-document.querySelector('input[type = "password"]')
+document.querySelector('#title')  => Find the first element that matches the CSS selector #title.
+document.querySelector('.heading') => Find the first element that matches the CSS selector .heading.”
+document.querySelector('input[type = "password"]') => Find the first <input> element whose type is "password".”
+[type = "password"] this is called a attribute selector in CSS 
+querySelector() returns only the first matching element.
 
 Always remember nodeList and Html collection is not an array although we can convert them in array 
 array always contains the methods like : forEach, map, Reduce 
 
-document.querySelectorAll => querSelectorAll selects all the value or the full node list and it is not an aray
+document.querySelectorAll => querSelectorAll selects all the value or the full node list and it is not an array but it's similar to array 
 let's say 
 tempList = document.querySelectorAll('li')
 and if apply css property 
 tempList.style.color = 'green' // it won't work you have to define the index on which one to apply
 tempList[0].style.color = 'green'  // it will work  // we always have to define index even if there is only one element 
 
+we can use only foreach in nodelist 
+firstli.forEach((l) => {
+    l.style.backgroundColor = 'orange'
+})
+
+// this is how you can manipulate the dom
+document.querySelectorAll("h3")
+allH3.forEach((h) => {
+    h.style.color = "Black"
+    h.style.padding = "10px"
+    h.style.backgroundColor = "orange"
+    h.innerText = "Varun"
+})
+
+
 nodelist and HTML collection are two different things
 Array.from() is used to convert nodelist or HTML collection to array
 
 you can use forEach in node list but not with html collection 
 
--->
+--> 
