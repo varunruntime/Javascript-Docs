@@ -78,7 +78,14 @@ form.addEventListener('submit', function(e){
 ## Project 3
 
 ```javascript
-cosnole.log("Varun")
+const clock = document.querySelector('#clock')
+
+setInterval(function(){
+  let date = new Date(); // stores a todays date 
+  console.log(date.toLocaleTimeString()); // gives the time in the console in every second 
+  clock.innerHTML = date.toLocaleTimeString(); // it inputs the time in the innerhtml <div id = "clock">11:02:25</div>
+  // and it creating new object Date after every second and updating the innerHtml after every second 
+}, 1000)
 ```
 
 ## Project 4
